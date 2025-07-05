@@ -8,8 +8,8 @@ import { state } from '@/store';
   shadow: false,
 })
 export class NlWelcome {
-  @Prop() titleWelcome = 'Welcome to Nostr!';
-  @Prop() description = 'This website is part of the Nostr network. Log in with your Nostr profile or sign up to join.';
+  @Prop() titleWelcome = '환영합니다!';
+  @Prop() description = '이 웹사이트는 Nostr 네트워크의 일부입니다. 이미 가지고 있는 Nostr 계정을 사용해서 로그인하거나 새로 계정을 생성하세요.';
 
   handleChangeScreen(screen) {
     state.path = [...state.path, screen];
@@ -25,7 +25,7 @@ export class NlWelcome {
 
         <div class="max-w-52 mx-auto pb-5">
           <div class="flex gap-3 flex-col mb-2">
-            <button-base titleBtn="Log in" onClick={() => this.handleChangeScreen(CURRENT_MODULE.WELCOME_LOGIN)}>
+            <button-base titleBtn="로그인" onClick={() => this.handleChangeScreen(CURRENT_MODULE.WELCOME_LOGIN)}>
               <svg style={{ display: 'none' }} slot="icon-start" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path
                   stroke-linecap="round"
@@ -38,7 +38,7 @@ export class NlWelcome {
 
           {/* <div class="nl-divider py-3 flex items-center text-xs uppercase before:flex-[1_1_0%] before:border-t before:me-6 after:flex-[1_1_0%] after:border-t  after:ms-6">Or</div> */}
 
-          <button-base onClick={() => this.handleChangeScreen(CURRENT_MODULE.WELCOME_SIGNUP)} titleBtn="Sign up">
+          <button-base onClick={() => this.handleChangeScreen(CURRENT_MODULE.WELCOME_SIGNUP)} titleBtn="계정 생성">
             <svg style={{ display: 'none' }} slot="icon-start" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
               <path
                 stroke-linecap="round"
